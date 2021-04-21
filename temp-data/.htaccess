@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Members Only"
+AuthUserFile C:\xampp\htdocs\notification\.htpasswd
+require valid-user

@@ -1,0 +1,197 @@
+/*body
+{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Arimo', sans-serif;
+}
+*/
+ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: #ecedf0;
+  /*background: linear-gradient(45deg, #4f00bc, #29abe2) no-repeat;*/
+}
+/*
+.box {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 9px;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 240px -18px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}*/
+
+[class^=css-icon-] {
+  display: inline-block;
+  margin: .1em;
+}
+
+.css-icon-plus {
+  height: 15px;
+  width: 15px;
+}
+.css-icon-plus:before, .css-icon-plus:after {
+  content: '';
+  height: 2px;
+  width: 15px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: .2s ease;
+  background: #fff;
+}
+.css-icon-plus:after {
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.add-collab-bubble {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 54px;
+  width: 54px;
+  background: #2A79D5;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px -4px rgba(51, 51, 51, 0.2);
+  transition: background 0.2s ease-out 0.1s, height 0.2s ease, width 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease-out;
+  z-index: 10;
+}
+.add-collab-bubble:not(.open):hover {
+  box-shadow: 0 4px 20px -4px rgba(42, 121, 213, 0.7);
+}
+.add-collab-bubble .bubble-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 54px;
+  width: 54px;
+  z-index: 2;
+  cursor: pointer;
+}
+.add-collab-bubble i {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  transition: 0.2s ease;
+  transform-origin: center;
+}
+.add-collab-bubble i:before, .add-collab-bubble i:after {
+  transition: 0.2s ease;
+  background: #fff;
+}
+.add-collab-bubble ul {
+  visibility: hidden;
+  padding: 1em 0.5em;
+  top: 50%;
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%,-50%);
+}
+.add-collab-bubble ul span.add-header {
+  display: block;
+  margin: 0 0 19px 0.5em;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.add-collab-bubble ul li {
+  margin: 0 0 1px 0;
+  opacity: 0;
+  transform: translateX(25%);
+}
+.add-collab-bubble ul li:last-of-type {
+  margin: 0;
+}
+.add-collab-bubble ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.3em 0.5em;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.add-collab-bubble ul li a:hover {
+  color: #2A79D5;
+  background: #f7f7f7;
+}
+.add-collab-bubble ul li .collab-logo {
+  display: inline-block;
+  width: 24px;
+  margin: 0 8px 0 0;
+  text-align: center;
+}
+.add-collab-bubble ul li img {
+  max-height: 24px;
+  max-width: 24px;
+  width: auto;
+}
+.add-collab-bubble.open {
+  border-radius: 4px;
+  margin-top: -160px;
+  width: 180px;
+  height: 170px;
+  background: #fff;
+  box-shadow: -6px 6px 130px -12px rgba(51, 51, 51, 0.4);
+  transition: background 0.1s ease, height 0.2s ease, width 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
+}
+.add-collab-bubble.open span.add-header {
+  opacity: 1;
+  transition: opacity 0.2s ease-out 0.1s;
+}
+.add-collab-bubble.open i {
+  transform: rotate(45deg);
+  transition: 0.24s ease-out;
+}
+.add-collab-bubble.open i:before, .add-collab-bubble.open i:after {
+  background: #999;
+}
+.add-collab-bubble.open ul {
+  transition: all 0.3s;
+  visibility: visible;
+}
+.add-collab-bubble.open ul li {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.add-collab-bubble.open ul li:nth-of-type(1) {
+  transition-delay: 0.08s;
+}
+.add-collab-bubble.open ul li:nth-of-type(2) {
+  transition-delay: 0.12s;
+}
+.add-collab-bubble.open ul li:nth-of-type(3) {
+  transition-delay: 0.17s;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+			background-image: radial-gradient(circle at top right, deepskyblue,#14072e);
+		}
+		.mc{
+			color: white;
+			position: fixed;
+			font-family: tahoma;
+			writing-mode: vertical-rl;
+			font-size: 100px;
+			font-weight: bold;
+			margin-top: 55px;
+			color: rgba(255,255,255,.1);
+			
+
+		}
+		.icons{
+			background-color: gray;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			text-align:center;
+			line-height: 50px;
+			columns: white;
+			font-size: 20px;
+			margin-top: 15px;
+			cursor: pointer;
+			position: relative;
+			z-index: 10;
+
+		}
+		.fa-home, .fa-cog, .fa-spotify{
+			color: white;
+
+		}
+		#home{
+			background-color: #1e90ff;
+			color: rgba(30,144,255,0.3);
+
+		}
+		#arrow{
+			background-color: #ff4757;
+			color: rgba(235,77,75,0.3);
+		}
+		#spoty{
+			background-color: #2ecc71;
+			color: rgba(47,204,113,0.3);
+
+		}
+		nav{
+			background-color: #14072e;
+			padding: 10px;
+			padding-left: 20px;
+			display: inline-block;
+			color: white;
+			font-family: tahoma;
+			border-radius: 15px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			overflow: hidden;
+			max-width: 270px;
+
+		}
+		#icons-bar{
+			position: absolute;
+		}
+		#list ul{
+			list-style: none;
+			position: relative;
+			z-index: 10;
+
+		}
+		#list > ul{
+			margin-left: 50px;
+
+		}
+		.title{
+			margin-left: 90px;
+			font-weight: bold;
+			font-size: 18px;
+			margin-top: 10px;
+			position: relative;
+			z-index: 10;
+
+		}
+		#list ul li{
+			margin-bottom: 20px;
+
+		}
+		#list ul i{
+			margin-right: 13px;
+
+		}
+		#list ul > ul i{
+			margin-left: 10px;
+
+		}
+		.light{
+			animation: shadow 1.5s ease forwards;
+
+		}
+		.off{
+			animation: off .5s ease forwards;
+		}
+		@keyframes shadow{
+			0%{
+				box-shadow: 0px 0px 0px 0px;
+
+			}
+			100%
+			{
+				box-shadow: 0px 0px 100px 200px;
+
+
+			}
+		}
+		.ball{
+			z-index: 9999;
+			position: absolute;
+			top: 23px;
+			left: -12px;
+			width: 5px;
+			height: 5px;
+			background-color: white;
+			border-radius: 50%;
+			transition: all 1s ease;
+
+		}
+		.ball-c{
+			transform: translateY(59px);
+			transition: all 1s ease;
+
+		}
+		.ball-s{
+			transform: translateY(130px);
+			transition: all 1s ease;
+			
+		}
+		.ball-h{
+			transform: translateY(0px);
+			transition: all 1s ease;
+			
+		}
+	</style>
+</head>
+<body>
+
+	<div class="mc"><nobr>COOL MENU</nobr></div>
+	<nav>
+		<div id="icons-bar">
+			<div class="ball"></div>
+			<div id="home" class="icons" onclick="home()">
+				<i class="fa fa-home"></i>
+			</div>
+			<div id="arrow" class="icons">
+				<i class="fa fa-cog"></i>
+			</div>
+			<div id="spoty" class="icons">
+				<i class="fa fa-spotify"></i>
+			</div>
+		</div>
+		<div id="list">
+			<p class="title">Dashboard</p>
+			<ul>
+				<li><i class="fa fa-search"></i>Search Us</li>
+				<li><i class="fa fa-bell"></i>Notifications</li>
+				<li><i class="fa fa-share-sqaure"></i>Share</li>
+				<li><i class="fa fa-calender"></i>New designs</li>
+				<ul>
+					<li>HOME<i class="fa fa-chevron-right"></i></li>
+					<li>Gallery<i class="fa fa-chevron-right"></i></li>
+					<li>Testinomials<i class="fa fa-chevron-right"></i></li>
+					<li>Responsiveness<i class="fa fa-chevron-right"></i></li>
+				</ul>
+
+			</ul>
+		</div>
+
+
+
+	</nav>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

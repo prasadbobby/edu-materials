@@ -1,0 +1,191 @@
+.data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+} 
+
+.data .boxer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 320px;
+    height: 450px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0,0,0,.5);
+}
+
+.data .boxer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4e73df;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.data .boxer:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.data .boxer:after {
+    content: "EDU";
+    position: absolute;
+    top: 35%;
+    left: -8%;
+    font-size: 11em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.2);
+
+}
+
+.data .boxer .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.data .boxer:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.data .boxer .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*rotate(20deg)*/
+    width: 220px;
+}
+
+.data .boxer .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.data .boxer:hover .contentBx {
+    height: 210px;
+}
+
+.data .boxer .contentBx .head {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.data .boxer .contentBx .size,
+.data .boxer .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.data .boxer:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.data .boxer:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.data .boxer .contentBx .size h3,
+.data .boxer .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.data .boxer .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.data .boxer .contentBx .size span:hover {  /* other bug */
+    background: #B90000;
+}
+
+.data .boxer .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.data .boxer .contentBx .color span:nth-child(2) {
+     background: #1BBFE9;
+}
+
+.data .boxer .contentBx .color span:nth-child(3) {
+     background: #1B2FE9;
+}
+
+.data .boxer .contentBx .color span:nth-child(4) {
+     background: #080481;
+}
+
+.data .boxer .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.4);
+
+}
+
+.data .boxer:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+}

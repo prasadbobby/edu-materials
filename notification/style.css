@@ -1,0 +1,140 @@
+body {
+  min-height: 100vh;
+  background: #eaeaea;
+  font-family: "Montserrat", sans-serif;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: default !important;
+}
+
+.box {
+  padding: 0;
+}
+.box header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  padding: 16px;
+  padding-bottom: 20px;
+}
+.box header img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+}
+.box .body {
+  position: relative;
+  overflow: hidden;
+  min-height: 254px;
+  padding: 1.25rem;
+}
+.box .body .field:first-child {
+  margin-bottom: 10px;
+}
+.box .body .field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.box .body .field .control input,
+.box .body .field .control textarea {
+  box-shadow: none !important;
+  transition: all 0.3s;
+}
+.box .body .field .control input:focus,
+.box .body .field .control textarea:focus {
+  border-color: #00d1b2;
+}
+.box .body .success-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.box .body .success-block .inner {
+  position: relative;
+  width: 100%;
+  height: 254px;
+}
+.box .body .success-block .inner .dot {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  height: 108px;
+  width: 108px;
+  border-radius: 50%;
+  background: #00d1b2;
+  z-index: 0;
+  transform: scale(0);
+  -webkit-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.box .body .success-block .inner .caption {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .body .success-block .inner .caption svg {
+  display: block;
+  height: 40px;
+  width: 40px;
+  stroke: #fff;
+  stroke-width: 3px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  transition-delay: 0.35s;
+}
+.box .body .success-block .inner .caption h3 {
+  margin-top: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  transition-delay: 0.4s;
+}
+.box .body .success-block.is-active .dot {
+  transform: scale(25);
+}
+.box .body .success-block.is-active .caption svg,
+.box .body .success-block.is-active .caption h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.link-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6dacff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s;
+}
+.link-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.link-button:hover {
+  transform: scale(1.1) rotate(180deg);
+  background: #00d1b2;
+}
