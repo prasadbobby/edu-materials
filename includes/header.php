@@ -301,7 +301,7 @@
   <div class="load-start">
   <div class="loader">
     
-  </div>
+  </div> 
 </div>
   
   

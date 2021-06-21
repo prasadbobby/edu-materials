@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect('localhost','root','','testing');
+$con=mysqli_connect('localhost','root','','edu-materials');
 
 if($con)
 {

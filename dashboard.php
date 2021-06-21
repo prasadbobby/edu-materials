@@ -2,7 +2,7 @@
 include('includes/header.php'); 
 include('includes/navbar.php'); 
 // include('login_check.php'); 
-$con=mysqli_connect('localhost','root','','testing');
+$con=mysqli_connect('localhost','root','','edu-materials');
 
 // session_start();
 ?>

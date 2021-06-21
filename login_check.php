@@ -15,7 +15,7 @@ ini_set( "display_errors", 0);
 
 <?php
 session_start();
-$con=mysqli_connect('localhost','root','','testing');
+$con=mysqli_connect('localhost','root','','edu-materials');
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -32,7 +32,7 @@ $mail->isSMTP();                            // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                     // Enable SMTP authentication
 $mail->Username = 'edu.materials.user@gmail.com';          // SMTP username
-$mail->Password = 'EDU#materials'; 			// SMTP password
+$mail->Password = 'EDU#materials@123'; 			// SMTP password
 $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                          // TCP port to connect to
 

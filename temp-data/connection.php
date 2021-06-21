@@ -25,7 +25,7 @@
 ini_set( "display_errors", 0); 
 
 session_start();
-$con=mysqli_connect('localhost','root','','testing');
+$con=mysqli_connect('localhost','root','','edu-materials');
 
 
 use PHPMailer\PHPMailer\PHPMailer;

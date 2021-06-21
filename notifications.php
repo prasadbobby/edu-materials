@@ -12,7 +12,7 @@ include("includes/navbar.php");
            <?php
     //     }
        // echo ($_SESSION[name]);
-        $conn=mysqli_connect('localhost','root','','testing');
+        $conn=mysqli_connect('localhost','root','','edu-materials');
         mysqli_query($conn,"update newmessages set read1='1' where rusername LIKE BINARY '$_SESSION[name]%'");
 
      ?>

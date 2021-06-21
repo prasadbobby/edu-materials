@@ -1,4 +1,4 @@
-<?php $conn=mysqli_connect('localhost','root','','testing'); 
+<?php $conn=mysqli_connect('localhost','root','','edu-materials'); 
 session_start();
 ?>
 
